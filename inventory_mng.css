@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+body {
+  width: 100%;
+  padding: 0 10px;
+  background: url("./images/bg1.jpg"), #000;
+  background-position: center;
+  background-size: cover;
+}
+
+.inventory {
+  width: 85%;
+  margin: 3em auto;
+  padding: 2em;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}

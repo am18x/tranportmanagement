@@ -15,17 +15,31 @@
             </a>
 
             <ul class="nav nav-underline justify-content-end">
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Login</a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a class="dropdown-item" href="admin/login.php">Admin Login</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="driver/login.php">Driver Login</a>
-                        </li>
-                    </ul>
-                </li>
+                <?php
+                    if(isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn']) {
+                        // If logged in, show the logout button
+                        echo '
+                            <li class="nav-item">
+                                <a class="nav-link" href="logout.php">Logout</a>
+                            </li>
+                        ';
+                    } else {
+                        // If not logged in, show the login dropdown
+                        echo '
+                            <li class="nav-item dropdown">
+                                <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Login</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="admin_login.php">Admin Login</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="driver_login.php">Driver Login</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        ';
+                    }
+                ?>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="index.php">Home</a>
                 </li>
