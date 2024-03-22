@@ -1,0 +1,15 @@
+.float-md-end {
+  position: relative;
+  display: block;
+  font-size: 3.5em;
+  line-height: 1.5em;
+  font-weight: 100;
+  margin-top: 2.5em;
+  margin-bottom: 3em;
+  width: 50%;
+}
+
+.inner {
+  width: 45%;
+  margin-top: 10em;
+}
